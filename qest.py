@@ -30,7 +30,8 @@ def best_way(map):
 
                     if (idx_rows+1<=4) and (map[idx_col][idx_rows+1] == ' '):
                         mod_map[idx_col][idx_rows+1] = str(iter + 1)
-                if rows == iter:
+
+                if (rows == iter) or (rows == iter-1) or (rows == iter+1) or (rows == iter+2) or (rows == iter-2):
                     if (idx_col!=0) and (map[idx_col-1][idx_rows] == ' '):
                         mod_map[idx_col-1][idx_rows] = str(iter + 1)
 
